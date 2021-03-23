@@ -18,9 +18,9 @@
         "type": "image/jpg"
       },
       {
-        "src": "/img/Movie3.jpg",
+        "src": "/img/Movie1.png",
         "sizes": "480x480",
-        "type": "image/jpg"
+        "type": "image/png"
       }
     ]
   }
