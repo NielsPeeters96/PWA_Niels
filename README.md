@@ -1,75 +1,110 @@
-# Progressive Web Application
-In this course we will convert the client side web application previously made Web App From Scratch into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately we are going to implement a series of optimisations to improve the performance of the application.  Learning goals You understand the difference between client side and server side rendering and you can apply server side rendering in your application You understand how a Service Worker works and you can implement it in your application. You understand how the critical render path works and how you can optimize it for a better runtime and / or perceived performance.
- 
-# Ghibli Movies
-Simple web app that connects a API, retrieves data with javascript, and displays it on the front end of the website. The goal is to learn javascript syntaxes, datatypes and basic knowledge of working with JSON and javascript objects.
+##### Progressive Web App
 
-## Usage
+# Ghibli Studio
 
-All movies from Ghibli API. Click on a movie title and it will show you the description, release date and producer.
+## Project
+In this course I will convert the client side web application previously made Web App From Scratch into a server side rendered application. I also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately I'm going to implement a series of optimisations to improve the performance of the application. All the basic parts covered in this course are very useful to know when you later choose to make an app using a framework. All these parts are (almost) all automated in a framework and are therefore done for you. So it is helpful to know exactly how those parts work.
 
-## LiveLink
-https://nielspeeters96.github.io/NielsPeetersWAFS/
+### Things I completed
+1. Copy the WAFS application
+2. Check code and delete unnecessary features
+3. Install npm, Node.js and Express
+4. Change code to Node.js and Express
+5. Upload project on Heroku
 
-### Screenshot
+## Screenshot
 
 ![Frontend ](https://github.com/NielsPeeters96/NielsPeeters_Web_App_From_Scratch/blob/main/img/Screenshot.png)
 
-## Folder Structure
+#### Features
+- By clicking on movies or people you'll see all movies and people related to Ghibli Studios
+- after that you can click on a movie or person
+- it will show a detailpage with information about the movie or person
 
-This projects uses **modules**. This helps your code to be more readable. Never worked with modules before so it will be a difficult task.
+### [Live version](https://pwa-niels.herokuapp.com/)
 
-## API Endpoints Structure
+## Techniques
+This app is built, using:
+- [npm](https://www.npmjs.com/)
+- [Node.js server](https://nodejs.org/)
+- [Express router](https://expressjs.com/)
+- [EJS Templating engine](https://ejs.co/)
+- [Heroku deployment](https://www.heroku.com/nodejs)
 
-What's inside the API (structure/objects).
-
-The documentation and all the (interactive) endpoints kan be found [here](https://ghibliapi.herokuapp.com/#section/Studio-Ghibli-API).
-
-Example below:
-
-### Films
-
-This endpoint is used to fetch movies, producers, release dates and the description
-
-#### Parameters
-
-_id_: **2baf70d1-42bb-4437-b551-e5fed5a87abe**
-_title_: **Castle in the sky**
-_producer_: **Isao Takahata**
-_release_date_: **1986**
-
-#### Output
-
-```json
-{
-    "Films": [
-        {
-            "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
-            "title": "Castle in the Sky",
-            "description": "The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world.",
-            "director": "Hayao Miyazaki",
-            "producer": "Isao Takahata",
-            "release_date": "1986",
-            "rt_score": "95"
-        },
-        {
-            "id": "12cfb892-aac0-4c5b-94af-521852e46d6a",
-            "title": "Grave of the Fireflies",
-            "description": "In the latter part of World War II, a boy and his sister, orphaned when their mother is killed in the firebombing of Tokyo, are left to survive on their own in what remains of civilian life in Japan. The plot follows this boy and his sister as they do their best to survive in the Japanese countryside, battling hunger, prejudice, and pride in their own quiet, personal battle.",
-            "director": "Isao Takahata",
-            "producer": "Toru Hara",
-            "release_date": "1988",
-            "rt_score": "97"
-        },
-    ]
-}
+## :gear: Installation
+1. Clone the repository:  
+```
+git clone https://github.com/ralfz123/progressive-web-apps-2021.git
 ```
 
-## Progression
-Week 1:
-During the start of the course PWA we received a quick summary of what it entailed on the first day. Then I made an action plan and first figured out what Node JS is and what the pros / cons are. Then I installed node and added it to my application. I kind of copied my old WAFS application and adapted it further. Day two I received clear instructions from Joost Faber who explained how best to start and which example you can use. It was all new to me so I had no idea how to show html on the page or even use Node. I researched this and finally managed to create the index.js page and linked everything together.
+2. Install dependencies   
+```
+npm install
+```
 
-Week 2:
-Service workers, manifest, detailpage
+3. To run the app   
+```
+npm run start
+```
 
-Week 3:
+4. To run the app in developer mode (with nodemon)
+```
+npm run dev
+```
+5. Go to [localhost](http://localhost:5000/) in the browser and voilà :sparkles:
+```
+http://localhost:5000/
+```
+
+#### Server 
+For running the server i use the Express framework for Node.js. This is a web framework for Node.js which is good for setting up a server.
+
+1. Require Express
+```
+const express = require("express");
+```
+
+After that you init your app
+```
+const app = express();
+```
+
+Config your Express-app
+```js
+app.use(express.static('static')); // Declare your static folder
+
+// Declare folders in the static folder for easy use
+app.use('/styles', express.static(__dirname + 'static/styles'));
+app.use('/scripts', express.static(__dirname + 'static/scripts'));
+app.use('/icons', express.static(__dirname + 'static/icons'));
+
+// Run the server on a port
+app.listen(5000, () => console.log(`App is running on port 5000`));
+```
+
+#### Templating engine
+For the templating engine I use EJS. I never worked with EJS so it's all new to me.
+
+### Performance
+<!--- <img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/perform-best-prac-26-3.png" width=400px />
+
+<!--- <img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/performance-26-3.png" width=400px />
+
+<!---Before & after minifying
+Screenshots!
+Though building/minifying it gets .5 seconds faster
+- It works I think 5 milliseconds faster with the minified code :)
+
+<!---<img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/seo-optimisations.png" width=400px />
+Added robots.txt and sitemap.xml, because of SEO. Although it was 100%, it can also be improved ;)
+
+<!---PWA statics... Because the manifest don't loaded correctly, it isn't installable. I have to take a look at this. because the service worker don't work at the moment, the manifest cannot be read.
+<img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/pwa-26-3.png" width=400px />
+
+### Serviceworker
+first time I used a serviceworker
+
+#### Cache
+At the moment I want to add a new favourite, it is added to a global array. But at the moment when the list where the page lives is `/favourites`. When the app starts (and during the app), this page **must not** be added to the cache. Because when you hit the like button to create a new fav combo and you want to see the fav list, you click on MY FAVOURITES and go to `/favourites`. The service worker takes then this page from the cache and you see an empty fav list. Therefore you need to whitelist `/favourites` so this page won't be cached, but retrieved from the server. But on the other side I want to see my fav list when I am offline.
+
+All pages will be cached, excluded the /favourites. All pages will be served from the server when online. While the user is offline, then the pages will be shown whose are cached when the user was online. The pages whose are not cached and when the user wants to enter them, he receives an offline page.
