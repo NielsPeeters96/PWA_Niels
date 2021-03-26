@@ -91,5 +91,16 @@ For the templating engine I use EJS. I never worked with EJS so it's all new to 
 
 Next time it is important to first view the performance of the website and only then implement improvements. Then you can compare these two and see exactly how much it makes a difference. The website now works very well and I only minified the css, also because I don't use client side javascript.
 
+![image](https://user-images.githubusercontent.com/78353674/112664677-82f18800-8e5a-11eb-96c7-6432f73ca9a4.png)
+
+Within my run time performancer panel you can see that all boxes are green, which means that it is user-friendly and the user can get started optimally. 
+The performance can only decrease because all pages are cached. This slows down the user's device. You can prevent this by adding another function in your service worker, but I didn't know how to do this myself.
+
+Perceived performance is a measure of how fast a user thinks your website is, not necessarily how fast your technical stats say it is.
+
+![image](https://user-images.githubusercontent.com/78353674/112665971-f051e880-8e5b-11eb-8367-b7d1eb3a7400.png)
+
+I tested my webpage via the website webpage test and it came out that I score high on first view, repeat view and time to first byte, only things can be a lot better in the field of images. This causes my performance to slow down the most
+
 ### Cache
 I chose to cache all pages. This so that the page also works offline and when the person no longer has internet access can also see which movie he liked and which person plays in it.
