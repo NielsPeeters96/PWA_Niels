@@ -15,6 +15,10 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  body {
+    font-family: raleway;
+  }
   
   h1 {
     text-align: center;
@@ -96,14 +100,12 @@
   }
 
   h2 {
-    font-family: 'roboto';
     font-size: 3.5em;
     text-transform: uppercase;
     text-align: center;
   }
 
   p {
-    font-family: nunito;
     font-size: 1.5em;
     text-align: center;
   }
@@ -111,10 +113,6 @@
   .images {
     float: left;
     max-width: 50%;
-  }
-
-  div {
-    text-align: center;
   }
 
   footer {
@@ -125,4 +123,34 @@
     background-color: rgb(153, 144, 144);
     color: white;
     text-align: center;
+  }
+
+  #details {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+
+  #details p {
+    text-transform: uppercase;
+  }
+  
+  #home {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    color: rgb(231, 131, 49);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: raleway;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  #home:hover,
+  #home:focus {
+    background: rgb(231, 131, 49);
+    color: #fff;
   }
