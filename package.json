@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:css": "node scripts/build-css.js"
+    "build": "npm-run-all build:*",
+    "prebuild:css": "rimraf \"public/css\"",
+    "build:css": "npm run prebuild:css && node scripts/build-css.js"
   },
   "author": "Niels Peeters",
   "license": "ISC",
@@ -24,6 +26,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1"
+    "gulp-concat": "^2.6.1",
+    "rimraf": "^3.0.2"
   }
 }

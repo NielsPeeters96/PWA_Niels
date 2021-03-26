@@ -1,14 +1,11 @@
-const gulp = require('gulp')
-const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp');
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
 
-return gulp.src([
-  './src/css/style.css',
-])
-  .pipe(concat('style.css'))
+return gulp
+  .src('./src/css/style.css')
   .pipe(cleanCSS())
   .pipe(autoprefixer({
     cascade: false
   }))
-  .pipe(gulp.dest('/public/css/'))
+  .pipe(gulp.dest('./public/css'));
