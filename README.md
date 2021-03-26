@@ -86,6 +86,9 @@ app.listen(5000, () => console.log(`App is running on port 5000`));
 For the templating engine I use EJS. I never worked with EJS so it's all new to me.
 
 ### Performance
+
+![image](https://user-images.githubusercontent.com/78353674/112648034-639e2f00-8e49-11eb-912b-0a0e9f8ebd8e.png)
+
 <!--- <img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/perform-best-prac-26-3.png" width=400px />
 
 <!--- <img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/performance-26-3.png" width=400px />
@@ -100,9 +103,6 @@ Added robots.txt and sitemap.xml, because of SEO. Although it was 100%, it can a
 
 <!---PWA statics... Because the manifest don't loaded correctly, it isn't installable. I have to take a look at this. because the service worker don't work at the moment, the manifest cannot be read.
 <img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/pwa-26-3.png" width=400px />
-
-### Serviceworker
-first time I used a serviceworker
 
 ### Cache
 <!---At the moment I want to add a new favourite, it is added to a global array. But at the moment when the list where the page lives is `/favourites`. When the app starts (and during the app), this page **must not** be added to the cache. Because when you hit the like button to create a new fav combo and you want to see the fav list, you click on MY FAVOURITES and go to `/favourites`. The service worker takes then this page from the cache and you see an empty fav list. Therefore you need to whitelist `/favourites` so this page won't be cached, but retrieved from the server. But on the other side I want to see my fav list when I am offline.
