@@ -89,22 +89,7 @@ For the templating engine I use EJS. I never worked with EJS so it's all new to 
 
 ![image](https://user-images.githubusercontent.com/78353674/112648034-639e2f00-8e49-11eb-912b-0a0e9f8ebd8e.png)
 
-<!--- <img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/perform-best-prac-26-3.png" width=400px />
-
-<!--- <img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/performance-26-3.png" width=400px />
-
-<!---Before & after minifying
-Screenshots!
-Though building/minifying it gets .5 seconds faster
-- It works I think 5 milliseconds faster with the minified code :)
-
-<!---<img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/seo-optimisations.png" width=400px />
-Added robots.txt and sitemap.xml, because of SEO. Although it was 100%, it can also be improved ;)
-
-<!---PWA statics... Because the manifest don't loaded correctly, it isn't installable. I have to take a look at this. because the service worker don't work at the moment, the manifest cannot be read.
-<img src="https://raw.githubusercontent.com/ralfz123/CATCH-YOUR-LAUGH--PWA/master/readme/pwa-26-3.png" width=400px />
+Next time it is important to first view the performance of the website and only then implement improvements. Then you can compare these two and see exactly how much it makes a difference. The website now works very well and I only minified the css, also because I don't use client side javascript.
 
 ### Cache
-<!---At the moment I want to add a new favourite, it is added to a global array. But at the moment when the list where the page lives is `/favourites`. When the app starts (and during the app), this page **must not** be added to the cache. Because when you hit the like button to create a new fav combo and you want to see the fav list, you click on MY FAVOURITES and go to `/favourites`. The service worker takes then this page from the cache and you see an empty fav list. Therefore you need to whitelist `/favourites` so this page won't be cached, but retrieved from the server. But on the other side I want to see my fav list when I am offline.
-
-<!---All pages will be cached, excluded the /favourites. All pages will be served from the server when online. While the user is offline, then the pages will be shown whose are cached when the user was online. The pages whose are not cached and when the user wants to enter them, he receives an offline page.
+I chose to cache all pages. This so that the page also works offline and when the person no longer has internet access can also see which movie he liked and which person plays in it.
