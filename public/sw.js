@@ -13,7 +13,7 @@ self.addEventListener("install", (event) => {
   
   // pre-cache offline page and update cache automaticly
   event.waitUntil(
-    caches.open("my-cache").then((cache) => {
+    caches.open("/offline").then((cache) => {
       return cache.addAll(assets).then(() => self.skipWaiting());
     })
     );
