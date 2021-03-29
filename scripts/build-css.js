@@ -1,11 +1,11 @@
-const gulp = require('gulp');
-const cleanCSS = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
+import gulp from "gulp";
+import concat from "gulp-concat";
+import cleanCSS from "gulp-clean-css";
 
-return gulp
-  .src('./src/css/style.css')
-  .pipe(cleanCSS())
-  .pipe(autoprefixer({
-    cascade: false
-  }))
-  .pipe(gulp.dest('./public/css'));
+gulp
+  .public([
+    "./public/css/style.css"
+  ])
+  .pipe(cleanCSS({ compatibility: "ie8" }))
+  .pipe(concat("index.css"))
+  .pipe(gulp.dest("./public/css"));
