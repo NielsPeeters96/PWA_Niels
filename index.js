@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const compression = require('compression')
 const PORT = process.env.PORT || 3000;
 const fetch = require('node-fetch');
 const endpointOne = 'https://ghibliapi.herokuapp.com/films';
@@ -11,8 +10,6 @@ app.use(express.static('public'));
 app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 app.use('/css', express.static(__dirname + 'public/css'));
-
-app.use(compression())
 
 // Setting views (EJS)
 app.set('views', './views');
